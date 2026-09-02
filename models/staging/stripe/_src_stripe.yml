@@ -9,8 +9,10 @@ sources:
           freshness:
             warn_after: {count: 12, period: hour}
             error_after: {count: 24, period: hour}
+
 models:
   - name: stg_stripe__payments
+    description: Staged payment data from Stripe.
     columns:
       - name: payment_method
         description: "{{ doc('payment_method') }}"
@@ -21,4 +23,4 @@ models:
                   - credit_card
                   - coupon
                   - bank_transfer
-                  - gift_card     
+                  - gift_card
