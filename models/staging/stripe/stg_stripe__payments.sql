@@ -9,3 +9,4 @@ select
 from {{ source('stripe', 'payment') }}
 
 where status <> 'fail'
+order by created_at desc

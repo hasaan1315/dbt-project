@@ -5,3 +5,4 @@ select
         status
 
     from {{ source('jaffle_shop', 'orders') }}
+    order by order_date desc
